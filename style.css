@@ -8,15 +8,10 @@
   font-style: normal;
 }
 
-.containter {
+.message {
   font-family: FilsonPro, Verdana, Sans-Serif;
 }
 
-.video {
-  width: 640px;
-  height: 360px;
-  margin: 0 auto;
-}
 
 /* Notification */
 .notification {
