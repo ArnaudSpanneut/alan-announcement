@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "FilsonPro";
+  src: local("Filson Pro Light"), local("Filson-Pro-Light"),
+    url("fonts/FilsonPro-Light.woff2") format("woff2"),
+    url("fonts/FilsonPro-Light.woff") format("woff"),
+    url("fonts/FilsonPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.containter {
+  font-family: FilsonPro, Verdana, Sans-Serif;
+}
+
+.video {
+  width: 640px;
+  height: 360px;
+  margin: 0 auto;
+}
+
+/* Notification */
+.notification {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  animation: notif 8s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.message_open #message-container {
+  opacity: 0;
+}
+
+@keyframes notif {
+  0% {
+    transform: translateY(-50px) scale(0.8);
+    opacity: 0;
+  }
+  10%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
