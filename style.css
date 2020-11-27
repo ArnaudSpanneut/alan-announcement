@@ -1,17 +1,37 @@
+:root {
+  --color-primary: #302929;
+  --color-secondary: #22e39e;
+}
+
 @font-face {
   font-family: "FilsonPro";
-  src: local("Filson Pro Light"), local("Filson-Pro-Light"),
-    url("fonts/FilsonPro-Light.woff2") format("woff2"),
-    url("fonts/FilsonPro-Light.woff") format("woff"),
-    url("fonts/FilsonPro-Light.ttf") format("truetype");
-  font-weight: 300;
+  src: local("Filson Pro Bold"), local("Filson-Pro-Bold"),
+    url("fonts/FilsonPro-Bold.woff2") format("woff2"),
+    url("fonts/FilsonPro-Bold.woff") format("woff"),
+    url("fonts/FilsonPro-Bold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
 }
 
-.message {
-  font-family: FilsonPro, Verdana, Sans-Serif;
+/* Reset */
+body {
+  color: var(--color-primary);
 }
 
+/* Helpers */
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+/* Message */
+.message {
+  font-family: FilsonPro, Verdana, Sans-Serif;
+  font-weight: 800;
+}
+.message_open #message-container {
+  opacity: 0;
+  transform: translateY(-10%);
+}
 
 /* Notification */
 .notification {
@@ -20,11 +40,7 @@
   animation: notif 8s cubic-bezier(0, 0, 0.2, 1);
 }
 
-.message_open #message-container {
-  opacity: 0;
-  transform: translateY(-10%);
-}
-
+/* Animation */
 @keyframes notif {
   0% {
     transform: translateY(-50px) scale(0.8);
